@@ -35,10 +35,14 @@ export default class CampsiteInfoComponent extends React.Component {
   }
   render() {
     if (this.props.campsite) {
-      return <div className="row">
-        {this.renderCampsite()}
-        {this.renderComments()}
-      </div>;
+      return (
+        <div className="container">
+          <div className="row">
+            {this.renderCampsite()}
+            {this.renderComments()}
+          </div>
+        </div>
+      )
     } else { return (<div></div>) };
   };
 }
