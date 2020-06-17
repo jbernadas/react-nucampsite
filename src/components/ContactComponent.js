@@ -36,7 +36,7 @@ class Contact extends Component {
         alert('Current state is: ' + JSON.stringify(values));
     }
 
-    render () {
+    render() {
 
         return (
             <div className="container">
@@ -120,8 +120,8 @@ class Contact extends Component {
                                             minLength: "Must be at least 2 characters",
                                             maxLength: "Must be 15 characters or less"
                                         }}
-                                    />  
-                                </Col>                      
+                                    />
+                                </Col>
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="phoneNum" md={2}>Phone</Label>
@@ -174,7 +174,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Col md={{size: 4, offset: 2}}>
+                                <Col md={{ size: 4, offset: 2 }}>
                                     <div className="form-check">
                                         <Label check>
                                             <Control.checkbox
@@ -188,7 +188,7 @@ class Contact extends Component {
                                 </Col>
                                 <Col md={4}>
                                     <Control.select model=".contactType" name="contactType"
-                                            className="form-control">
+                                        className="form-control">
                                         <option>By Phone</option>
                                         <option>By Email</option>
                                     </Control.select>
@@ -204,7 +204,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Col md={{size: 10, offset: 2}}>
+                                <Col md={{ size: 10, offset: 2 }}>
                                     <Button type="submit" color="primary">
                                         Send Feedback
                                     </Button>
@@ -215,7 +215,7 @@ class Contact extends Component {
                 </div>
             </div>
         );
-    } 
+    }
 }
 
 export default Contact;
