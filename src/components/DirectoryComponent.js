@@ -10,7 +10,6 @@ import {
 import { Link } from "react-router-dom";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from '../shared/baseUrl';
-import { campsitesLoading } from "../redux/ActionCreators";
 
 function RenderDirectoryItem({ campsite }) {
   return (
