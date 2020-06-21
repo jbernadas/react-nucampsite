@@ -1,5 +1,6 @@
 import * as ActionTypes from "./ActionTypes";
 import { CAMPSITES } from "../shared/campsites";
+import { baseUrl } from "../shared/baseUrl";
 
 export const addComment = (campsiteId, rating, author, text) => ({
   type: ActionTypes.ADD_COMMENT,
@@ -14,9 +15,9 @@ export const addComment = (campsiteId, rating, author, text) => ({
 export const fetchCampsites = () => (dispatch) => {
   dispatch(campsitesLoading());
 
-  setTimeout(() => {
-    dispatch(addCampsites(CAMPSITES));
-  }, 2000);
+  return fetch(baseUrl + campsites)
+    .then((response) => response.json())
+    .then((campsites) => dispatch(addCampsites(campsites)));
 };
 
 export const campsitesLoading = () => ({
